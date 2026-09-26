@@ -2328,7 +2328,10 @@ namespace RE::ID
 		inline constexpr REL::VariantID Singleton{ 711558, 2688883, 4796135 };
 		inline constexpr REL::VariantID AddFormToDataHandler{ 350112, 2192271 };
 		inline constexpr REL::VariantID CheckModsLoaded{ 1432894, 2192323 };
+		inline constexpr REL::VariantID CompileFiles{ 57137, 2192321 };
+		inline constexpr REL::VariantID ConstructObjectList{ 1043280, 2192326 };
 		inline constexpr REL::VariantID CreateReferenceAtLocation{ 500304, 2192301 };
+		inline constexpr REL::VariantID InitAllForms{ 189223, 2192344 };
 		inline constexpr REL::VariantID IsFormIDInuse{ 1448838, 2192351 };
 	}
 
