@@ -52,6 +52,27 @@ namespace RE
 			return func(this, a_data);
 		}
 
+		[[nodiscard]] bool CompileFiles(bool a_load)
+		{
+			using func_t = decltype(&TESDataHandler::CompileFiles);
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::CompileFiles };
+			return func(this, a_load);
+		}
+
+		[[nodiscard]] bool ConstructObjectList(TESFile* a_file, bool a_isFirst)
+		{
+			using func_t = decltype(&TESDataHandler::ConstructObjectList);
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::ConstructObjectList };
+			return func(this, a_file, a_isFirst);
+		}
+
+		void InitAllForms()
+		{
+			using func_t = decltype(&TESDataHandler::InitAllForms);
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::InitAllForms };
+			return func(this);
+		}
+
 		template <class T>
 		[[nodiscard]] BSTArray<T*>& GetFormArray() noexcept  //
 			requires(std::derived_from<T, TESForm> &&
