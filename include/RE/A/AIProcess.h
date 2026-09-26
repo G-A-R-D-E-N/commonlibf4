@@ -67,6 +67,13 @@ namespace RE
 			return func(this);
 		}
 
+		[[nodiscard]] TESPackage* GetPackageThatIsRunning() const
+		{
+			using func_t = decltype(&AIProcess::GetPackageThatIsRunning);
+			static REL::Relocation<func_t> func{ ID::AIProcess::GetPackageThatIsRunning };
+			return func(this);
+		}
+
 		bool IsWeaponSubgraphFinishedLoading(const Actor& a_actor)
 		{
 			using func_t = decltype(&AIProcess::IsWeaponSubgraphFinishedLoading);

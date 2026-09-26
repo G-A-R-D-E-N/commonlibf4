@@ -420,10 +420,31 @@ namespace Scaleform::GFx
 				return func(this, a_val, a_obj);
 			}
 
+			[[nodiscard]] bool IsInstanceOf(void* a_data, const char* a_className) const
+			{
+				using func_t = decltype(&ObjectInterface::IsInstanceOf);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::IsInstanceOf };
+				return func(this, a_data, a_className);
+			}
+
+			bool GetParent(void* a_data, Value* a_value) const
+			{
+				using func_t = decltype(&ObjectInterface::GetParent);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetParent };
+				return func(this, a_data, a_value);
+			}
+
 			bool HasMember(void* a_data, const char* a_name, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::HasMember);
 				static REL::Relocation<func_t> func{ ID::GFx::Value::HasMember };
+				return func(this, a_data, a_name, a_isdobj);
+			}
+
+			bool DeleteMember(void* a_data, const char* a_name, bool a_isdobj)
+			{
+				using func_t = decltype(&ObjectInterface::DeleteMember);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::DeleteMember };
 				return func(this, a_data, a_name, a_isdobj);
 			}
 
@@ -432,6 +453,13 @@ namespace Scaleform::GFx
 				using func_t = decltype(&ObjectInterface::GetArraySize);
 				static REL::Relocation<func_t> func{ ID::GFx::Value::GetArraySize };
 				return func(this, a_data);
+			}
+
+			bool SetArraySize(void* a_data, std::uint32_t a_size)
+			{
+				using func_t = decltype(&ObjectInterface::SetArraySize);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::SetArraySize };
+				return func(this, a_data, a_size);
 			}
 
 			bool GetMember(void* a_data, const char* a_name, Value* a_val, bool a_isdobj) const
@@ -476,11 +504,25 @@ namespace Scaleform::GFx
 				return func(this, a_data, a_value);
 			}
 
+			bool PopBack(void* a_data, Value* a_value)
+			{
+				using func_t = decltype(&ObjectInterface::PopBack);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::PopBack };
+				return func(this, a_data, a_value);
+			}
+
 			bool RemoveElements(void* a_data, std::uint32_t a_idx, std::int32_t a_count)
 			{
 				using func_t = decltype(&ObjectInterface::RemoveElements);
 				static REL::Relocation<func_t> func{ ID::GFx::Value::RemoveElements };
 				return func(this, a_data, a_idx, a_count);
+			}
+
+			void VisitElements(void* a_data, ArrVisitor* a_visitor, std::uint32_t a_startIndex, std::int32_t a_count) const
+			{
+				using func_t = decltype(&ObjectInterface::VisitElements);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::VisitElements };
+				return func(this, a_data, a_visitor, a_startIndex, a_count);
 			}
 
 			void VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj) const
@@ -495,6 +537,34 @@ namespace Scaleform::GFx
 				using func_t = decltype(&ObjectInterface::GetDisplayInfo);
 				static REL::Relocation<func_t> func{ ID::GFx::Value::GetDisplayInfo };
 				return func(this, a_data, a_info);
+			}
+
+			bool SetDisplayInfo(void* a_data, const DisplayInfo& a_info)
+			{
+				using func_t = decltype(&ObjectInterface::SetDisplayInfo);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::SetDisplayInfo };
+				return func(this, a_data, a_info);
+			}
+
+			bool CreateEmptyMovieClip(void* a_data, Value* a_movieClip, const char* a_instanceName, std::int32_t a_depth)
+			{
+				using func_t = decltype(&ObjectInterface::CreateEmptyMovieClip);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::CreateEmptyMovieClip };
+				return func(this, a_data, a_movieClip, a_instanceName, a_depth);
+			}
+
+			bool GotoAndPlay(void* a_data, std::uint32_t a_frame, bool a_stop)
+			{
+				using func_t = bool (ObjectInterface::*)(void*, std::int32_t, bool);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GotoAndPlay_Int };
+				return func(this, a_data, static_cast<std::int32_t>(a_frame), a_stop);
+			}
+
+			bool GotoAndPlay(void* a_data, const char* a_frame, bool a_stop)
+			{
+				using func_t = decltype(static_cast<bool (ObjectInterface::*)(void*, const char*, bool)>(&ObjectInterface::GotoAndPlay));
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GotoAndPlay_String };
+				return func(this, a_data, a_frame, a_stop);
 			}
 
 			// members

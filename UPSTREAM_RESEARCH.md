@@ -132,6 +132,34 @@ Sources:
 
 The render-target manager and external Scaleform texture functions are still only backed by the local reference in this pass, so they stay out for now.
 
+### Gameplay and Scaleform helpers
+
+Added another batch that matches between `commonlib_NonVR` and Luca's multi-runtime fork:
+
+- `AIProcess::GetPackageThatIsRunning`
+- `TESObjectWEAP::GetShotsPerSecond`
+- `Workshop::IsWorkshopItem`
+- `GFx::Value::ObjectInterface::IsInstanceOf`
+- `GetParent`
+- `DeleteMember`
+- `SetArraySize`
+- `PopBack`
+- `VisitElements`
+- `SetDisplayInfo`
+- `CreateEmptyMovieClip`
+- both `GotoAndPlay` overloads
+
+Sources:
+
+- [commonlib_NonVR IDs](https://git.nomadicinteractive.dev/ReverseEng/commonlib_NonVR/src/branch/main/include/RE/IDs.h)
+- [Luca AIProcess](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/RE/A/AIProcess.hpp)
+- [Luca TESObjectWEAP](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/RE/T/TESObjectWEAP.hpp)
+- [Luca Workshop](https://github.com/LucaDotGit/CommonLibF4/blob/main/src/RE/W/Workshop.cpp)
+- [Luca GFx Value](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/Scaleform/G/GFx_Value.hpp)
+- [Luca runtime IDs](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/RE/IDs.hpp)
+
+The remaining `GFx::Value` functions need supporting matrix/cxform/member-value types that GARDEN does not currently expose, so I left those out for now.
+
 ## Already in GARDEN
 
 I checked these and we already have them:

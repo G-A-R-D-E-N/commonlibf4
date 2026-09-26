@@ -106,6 +106,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetCurrentAmmo{ 1154936, 2232300 };
 		inline constexpr REL::VariantID GetCommandType{ 678523, 2231825 };
 		inline constexpr REL::VariantID GetOccupiedFurniture{ 1162965, 2232401 };
+		inline constexpr REL::VariantID GetPackageThatIsRunning{ 148295, 2231586 };
 		inline constexpr REL::VariantID IsWeaponSubgraphFinishedLoading{ 320183, 2231757 };
 		inline constexpr REL::VariantID KnockExplosion{ 533106, 2232384 };
 		inline constexpr REL::VariantID ProcessGreet{ 1174935, 2231808 };
@@ -2580,6 +2581,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::VariantID GetMeleeAttackSpeed{ 817670, 2198957 };
 		inline constexpr REL::VariantID GetMeleeAttackSpeedLabel{ 178784, 2198959 };
+		inline constexpr REL::VariantID GetShotsPerSecond{ 752116, 2198956 };
 		inline constexpr REL::VariantID Fire{ 1056037, 2198960 };
 	}
 
@@ -2784,6 +2786,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetSelectedWorkshopMenuNode{ 763948, 2195024 };
 		inline constexpr REL::VariantID InitializePlacementReference{ 1577199, 0 };  // Inlined in NG/AE
 		inline constexpr REL::VariantID IsLocationWithinBuildableArea{ 990965, 2194956 };
+		inline constexpr REL::VariantID IsWorkshopItem{ 1386903, 2194912 };
 		inline constexpr REL::VariantID PlaceCurrentReference{ 1058211, 2195155 };
 		inline constexpr REL::VariantID RegisterForItemDestroyed{ 1367004, 2194930 };
 		inline constexpr REL::VariantID RegisterForItemMoved{ 835323, 2194932 };
@@ -2839,17 +2842,27 @@ namespace Scaleform::ID
 	{
 		inline constexpr REL::VariantID ObjectAddRef{ 244786, 2286228 };
 		inline constexpr REL::VariantID ObjectRelease{ 856221, 2286229 };
+		inline constexpr REL::VariantID IsInstanceOf{ 616029, 2286137 };
+		inline constexpr REL::VariantID GetParent{ 227189, 2285968 };
 		inline constexpr REL::VariantID HasMember{ 788691, 2286078 };
+		inline constexpr REL::VariantID DeleteMember{ 1397711, 2285595 };
 		inline constexpr REL::VariantID GetArraySize{ 254218, 2285791 };
+		inline constexpr REL::VariantID SetArraySize{ 1479924, 2286563 };
 		inline constexpr REL::VariantID GetMember{ 1517430, 2285936, 4494126 };
 		inline constexpr REL::VariantID GetElement{ 827659, 2285881 };
 		inline constexpr REL::VariantID SetElement{ 433707, 2286575 };
 		inline constexpr REL::VariantID SetMember{ 1360149, 2286589 };
 		inline constexpr REL::VariantID Invoke{ 655847, 2286101 };
 		inline constexpr REL::VariantID PushBack{ 1330475, 2286424 };
+		inline constexpr REL::VariantID PopBack{ 13718, 2286392 };
 		inline constexpr REL::VariantID RemoveElements{ 1286586, 2286475 };
 		inline constexpr REL::VariantID VisitMembers{ 1276961, 2286786 };
+		inline constexpr REL::VariantID VisitElements{ 851872, 2286785 };
 		inline constexpr REL::VariantID GetDisplayInfo{ 498814, 2285873 };
+		inline constexpr REL::VariantID SetDisplayInfo{ 146578, 2286572 };
+		inline constexpr REL::VariantID CreateEmptyMovieClip{ 1579893, 2285573 };
+		inline constexpr REL::VariantID GotoAndPlay_Int{ 166362, 2286057 };
+		inline constexpr REL::VariantID GotoAndPlay_String{ 1562220, 2286058 };
 	}
 
 	namespace Memory
