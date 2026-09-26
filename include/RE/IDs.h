@@ -2,6 +2,11 @@
 
 namespace RE::ID
 {
+	namespace ActivateHandler
+	{
+		inline constexpr REL::VariantID DisableInput{ 35336, 2234873 };
+	}
+
 	namespace ActiveEffect
 	{
 		inline constexpr REL::VariantID CheckDisplacementSpellOnTarget{ 1415178, 2226001 };
@@ -876,6 +881,12 @@ namespace RE::ID
 		inline constexpr REL::VariantID BinaryStreamWithRescan{ 543595, 2205871 };
 	}
 
+	namespace BSScaleformExternalTexture
+	{
+		inline constexpr REL::VariantID SetTexture{ 119731, 2287494 };
+		inline constexpr REL::VariantID ReleaseTexture{ 651971, 2287493 };
+	}
+
 	namespace BSScaleformManager
 	{
 		inline constexpr REL::VariantID Singleton{ 106578, 2689600, 4796889 };
@@ -1060,6 +1071,11 @@ namespace RE::ID
 		inline constexpr REL::VariantID SendUIStringMessage{ 1270833, 2284977 };
 		inline constexpr REL::VariantID SendUIPtrMessage{ 1374542, 2284982 };
 		inline constexpr REL::VariantID SendUIStringUIntMessage{ 99795, 2284979 };
+	}
+
+	namespace BSUIScaleformData
+	{
+		inline constexpr REL::VariantID SendUIScaleformEvent{ 922159, 2284983, 2284983 };
 	}
 
 	namespace BSUtilities
@@ -1710,8 +1726,10 @@ namespace RE::ID
 		inline constexpr REL::VariantID ForcePauseGame{ 1307560, 2249384 };
 		inline constexpr REL::VariantID ForceResumeGame{ 668856, 2249385 };
 		inline constexpr REL::VariantID RegisterHandler{ 827678, 2249387 };
+		inline constexpr REL::VariantID RegisterHandlers{ 548136, 2249389 };
 		inline constexpr REL::VariantID Singleton{ 520890, 2689089, 4796375 };
 		inline constexpr REL::VariantID UnregisterHandler{ 734727, 2249388 };
+		inline constexpr REL::VariantID UnregisterHandlers{ 1010957, 2249390 };
 	}
 
 	namespace MenuCursor
@@ -2817,6 +2835,21 @@ namespace Scaleform::ID
 		inline constexpr REL::VariantID RemoveElements{ 1286586, 2286475 };
 		inline constexpr REL::VariantID VisitMembers{ 1276961, 2286786 };
 		inline constexpr REL::VariantID GetDisplayInfo{ 498814, 2285873 };
+		inline constexpr REL::VariantID IsInstanceOf{ 616029, 2286137 };
+		inline constexpr REL::VariantID GetParent{ 227189, 2285968 };
+		inline constexpr REL::VariantID SetArraySize{ 1479924, 2286563 };
+		inline constexpr REL::VariantID DeleteMember{ 1397711, 2285595 };
+		inline constexpr REL::VariantID PopBack{ 13718, 2286392 };
+		inline constexpr REL::VariantID VisitElements{ 851872, 2286785 };
+		inline constexpr REL::VariantID SetDisplayInfo{ 146578, 2286572 };
+		inline constexpr REL::VariantID GetDisplayMatrix{ 1494470, 2285874 };
+		inline constexpr REL::VariantID SetDisplayMatrix{ 22308, 2286573 };
+		inline constexpr REL::VariantID GetCxform{ 307708, 2285854 };
+		inline constexpr REL::VariantID SetCxform{ 692629, 2286570 };
+		inline constexpr REL::VariantID AttachMovie{ 373078, 2285459 };
+		inline constexpr REL::VariantID CreateEmptyMovieClip{ 1579893, 2285573 };
+		inline constexpr REL::VariantID GotoAndPlay_Int{ 166362, 2286057 };
+		inline constexpr REL::VariantID GotoAndPlay_String{ 1562220, 2286058 };
 	}
 
 	namespace Memory

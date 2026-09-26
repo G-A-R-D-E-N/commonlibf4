@@ -3,6 +3,7 @@
 #include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/G/GFxConvertHandler.h"
 #include "RE/S/ScreenshotHandler.h"
 
 namespace RE
@@ -11,7 +12,6 @@ namespace RE
 	class CameraZoomHandler;
 	class ClickHandler;
 	class DisconnectHandler;
-	class GFxConvertHandler;
 	class MenuOpenHandler;
 	class PipboyHandler;
 	class QuickSaveLoadHandler;
@@ -59,11 +59,25 @@ namespace RE
 			func(this, a_handler);
 		}
 
+		void RegisterHandlers()
+		{
+			using func_t = decltype(&MenuControls::RegisterHandlers);
+			static REL::Relocation<func_t> func{ ID::MenuControls::RegisterHandlers };
+			func(this);
+		}
+
 		void UnregisterHandler(BSInputEventUser* a_handler)
 		{
 			using func_t = decltype(&MenuControls::UnregisterHandler);
 			static REL::Relocation<func_t> func{ ID::MenuControls::UnregisterHandler };
 			func(this, a_handler);
+		}
+
+		void UnregisterHandlers()
+		{
+			using func_t = decltype(&MenuControls::UnregisterHandlers);
+			static REL::Relocation<func_t> func{ ID::MenuControls::UnregisterHandlers };
+			func(this);
 		}
 
 		// members
