@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/I/IUIMessageData.h"
 
 namespace Scaleform::GFx
@@ -15,6 +16,10 @@ namespace RE
 	public:
 		static constexpr auto RTTI{ RTTI::BSUIScaleformData };
 		static constexpr auto VTABLE{ VTABLE::BSUIScaleformData };
+		using SendEventFunction = void (*)(const BSFixedString&, Scaleform::GFx::Event*);
+
+		[[nodiscard]] static SendEventFunction GetSendUIScaleformEvent();
+		static void                            SendUIScaleformEvent(const BSFixedString& a_name, Scaleform::GFx::Event* a_event);
 
 		// members
 		Scaleform::GFx::Event* scaleformEvent{ nullptr };  // 18

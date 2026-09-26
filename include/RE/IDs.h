@@ -1062,6 +1062,11 @@ namespace RE::ID
 		inline constexpr REL::VariantID SendUIStringUIntMessage{ 99795, 2284979 };
 	}
 
+	namespace BSUIScaleformData
+	{
+		inline constexpr REL::VariantID SendUIScaleformEvent{ 922159, 2284983, 2284983 };
+	}
+
 	namespace BSUtilities
 	{
 		inline constexpr REL::VariantID ConvertFloatToHalf{ 10414, 2212098 };
