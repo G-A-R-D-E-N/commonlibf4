@@ -148,6 +148,13 @@ namespace RE
 		};
 		static_assert(sizeof(TextureHeader) == 0x8);
 
+		inline void LoadTextureData(Texture* a_texture, char* a_data, std::uint32_t a_dataSize, std::uint32_t a_mipLevel)
+		{
+			using func_t = decltype(&BSGraphics::LoadTextureData);
+			static REL::Relocation<func_t> func{ ID::BSGraphics::LoadTextureData };
+			return func(a_texture, a_data, a_dataSize, a_mipLevel);
+		}
+
 		class ConstantGroup
 		{
 		public:

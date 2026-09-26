@@ -7,6 +7,9 @@
 
 namespace RE
 {
+	class BGSLoadFormBuffer;
+	class BGSSaveFormBuffer;
+
 	class BGSInventoryItem
 	{
 	public:
@@ -32,6 +35,20 @@ namespace RE
 
 			[[nodiscard]] std::uint32_t GetCount() const noexcept { return count; }
 			[[nodiscard]] bool          IsEquipped() const noexcept { return flags.any(Flag::kSlotMask); }
+
+			void SaveGame(BGSSaveFormBuffer* a_buffer) const
+			{
+				using func_t = decltype(&Stack::SaveGame);
+				static REL::Relocation<func_t> func{ ID::BGSInventoryItem::Stack::SaveGame };
+				return func(this, a_buffer);
+			}
+
+			void InitLoadGame(BGSLoadFormBuffer* a_buffer)
+			{
+				using func_t = decltype(&Stack::InitLoadGame);
+				static REL::Relocation<func_t> func{ ID::BGSInventoryItem::Stack::InitLoadGame };
+				return func(this, a_buffer);
+			}
 
 			// members
 			BSTSmartPointer<Stack>             nextStack;  // 10
@@ -245,6 +262,34 @@ namespace RE
 			using func_t = decltype(&BGSInventoryItem::GetTotalWeight);
 			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::GetTotalWeight };
 			return func(this);
+		}
+
+		void SaveGame(BGSSaveFormBuffer* a_buffer) const
+		{
+			using func_t = decltype(&BGSInventoryItem::SaveGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::SaveGame };
+			return func(this, a_buffer);
+		}
+
+		void LoadGame(BGSLoadFormBuffer* a_buffer)
+		{
+			using func_t = decltype(&BGSInventoryItem::LoadGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::LoadGame };
+			return func(this, a_buffer);
+		}
+
+		void InitLoadGame(BGSLoadFormBuffer* a_buffer)
+		{
+			using func_t = decltype(&BGSInventoryItem::InitLoadGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::InitLoadGame };
+			return func(this, a_buffer);
+		}
+
+		void FinishLoadGame(BGSLoadFormBuffer* a_buffer)
+		{
+			using func_t = decltype(&BGSInventoryItem::FinishLoadGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::FinishLoadGame };
+			return func(this, a_buffer);
 		}
 
 		// members

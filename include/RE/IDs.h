@@ -333,6 +333,16 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetStackCount{ 82050, 2194107 };
 		inline constexpr REL::VariantID IsQuestObject{ 823447, 2194076 };
 		inline constexpr REL::VariantID GetTotalWeight{ 571297, 2194074 };
+		inline constexpr REL::VariantID SaveGame{ 1234736, 2194081 };
+		inline constexpr REL::VariantID LoadGame{ 343255, 2194082 };
+		inline constexpr REL::VariantID InitLoadGame{ 222749, 2194083 };
+		inline constexpr REL::VariantID FinishLoadGame{ 820395, 2194084 };
+
+		namespace Stack
+		{
+			inline constexpr REL::VariantID SaveGame{ 149217, 2194058 };
+			inline constexpr REL::VariantID InitLoadGame{ 919557, 2194060 };
+		}
 	}
 
 	namespace BGSInventoryItemUtils
@@ -352,6 +362,10 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetQuestItemCount{ 800903, 2194164 };
 		inline constexpr REL::VariantID FindItemIndex{ 2111, 2194165 };
 		inline constexpr REL::VariantID Clear{ 1080446, 2194162 };
+		inline constexpr REL::VariantID SaveGame{ 1579054, 2194185 };
+		inline constexpr REL::VariantID LoadGame{ 1392171, 2194186 };
+		inline constexpr REL::VariantID InitLoadGame{ 1216903, 2194187 };
+		inline constexpr REL::VariantID FinishLoadGame{ 591614, 2194188 };
 	}
 
 	namespace BGSIronSights
@@ -544,9 +558,19 @@ namespace RE::ID
 	namespace BGSSaveLoadManager
 	{
 		inline constexpr REL::VariantID Singleton{ 1247320, 2697802 };
+		inline constexpr REL::VariantID BufferSceneScreenShot{ 1234898, 2228079 };
 		inline constexpr REL::VariantID BuildSaveGameList{ 1342984, 2228053 };
+		inline constexpr REL::VariantID DeleteSaveFileImpl{ 809711, 2228033 };
+		inline constexpr REL::VariantID GenerateSaveFileNameImpl{ 434834, 2228059 };
+		inline constexpr REL::VariantID GetFullPath{ 505311, 2228030 };
 		inline constexpr REL::VariantID GetSaveDirectoryPath{ 1569549, 2228028 };
+		inline constexpr REL::VariantID IsLoadingAllowed{ 361558, 2228047 };
+		inline constexpr REL::VariantID IsSavingAllowed{ 735045, 2228045 };
+		inline constexpr REL::VariantID LoadGameImpl{ 540706, 2228040 };
 		inline constexpr REL::VariantID QueueSaveLoadTask{ 1487308, 2228080 };
+		inline constexpr REL::VariantID Quickload{ 603305, 2228042 };
+		inline constexpr REL::VariantID Quicksave{ 1055666, 2228041 };
+		inline constexpr REL::VariantID SaveGameImpl{ 954817, 2228036 };
 	}
 
 	namespace BGSSaveLoadGame
@@ -768,6 +792,7 @@ namespace RE::ID
 
 		inline constexpr REL::VariantID GetRendererData{ 1235449, 2704429 };
 		inline constexpr REL::VariantID GetCurrentRendererWindow{ 91810, 2704431 };
+		inline constexpr REL::VariantID LoadTextureData{ 415185, 2277289 };
 	}
 
 	namespace BSIdleInputWatcher
@@ -1818,6 +1843,9 @@ namespace RE::ID
 
 	namespace NiTexture
 	{
+		inline constexpr REL::VariantID Create1{ 1071950, 2270134 };
+		inline constexpr REL::VariantID Create2{ 964969, 2270135 };
+		inline constexpr REL::VariantID Create3{ 685580, 2270136 };
 		inline constexpr REL::VariantID SetAllowDegrade{ 948181, 2270148 };
 	}
 
@@ -2051,6 +2079,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID ClearPrison{ 920390, 2233196 };
 		inline constexpr REL::VariantID ReloadWeapon{ 458406, 2232907 };
 		inline constexpr REL::VariantID SetPerkCount{ 616372, 2233187 };
+		inline constexpr REL::VariantID SetTintingData{ 802946, 2233185 };
 		inline constexpr REL::VariantID HasLOSToTarget{ 449775, 2233004 };
 		inline constexpr REL::VariantID TryUnlockObject{ 1341574, 2233040 };
 		inline constexpr REL::VariantID EnableRadio{ 741937, 2233211 };
@@ -2452,6 +2481,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetSex{ 1257181, 2207107 };
 		inline constexpr REL::VariantID GetFacialBoneMorphIntensity{ 272217, 2207416 };
 		inline constexpr REL::VariantID SetHairColor{ 1201742, 2207426 };
+		inline constexpr REL::VariantID SetTintingData{ 452734, 2207493 };
 		inline constexpr REL::VariantID GetShortName{ 1221705, 2207405 };
 		inline constexpr REL::VariantID GetXPValue{ 1134136, 2207384 };
 	}

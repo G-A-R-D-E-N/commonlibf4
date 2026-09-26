@@ -62,6 +62,76 @@ Added:
 
 Addictol is already validating these targets against the actual function signatures before hooking them, so this is a lot better than just copying IDs out of a table.
 
+## Pulled in from this research pass
+
+### Save/load manager
+
+Added the missing native save/load calls that matched between the local RE reference and Luca's multi-runtime fork.
+
+Sources:
+
+- [commonlib_NonVR BGSSaveLoadManager](https://git.nomadicinteractive.dev/ReverseEng/commonlib_NonVR/src/branch/main/include/RE/B/BGSSaveLoadManager.h)
+- [Luca BGSSaveLoadManager implementation](https://github.com/LucaDotGit/CommonLibF4/blob/main/src/RE/B/BGSSaveLoadManager.cpp)
+- [Luca runtime IDs](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/RE/IDs.hpp)
+
+Added:
+
+- `BufferSceneScreenShot`
+- `GetFullPath`
+- `IsLoadingAllowed`
+- `IsSavingAllowed`
+- `Quickload`
+- `Quicksave`
+- `DeleteSaveFileImpl`
+- `GenerateSaveFileNameImpl`
+- `LoadGameImpl`
+- `SaveGameImpl`
+
+I left the autosave wrapper alone because the two sources expose the same target with different wrapper semantics.
+
+### Inventory serialization
+
+Added the inventory item, stack, and inventory-list save/load functions from the runtime RE work.
+
+Sources:
+
+- [commonlib_NonVR inventory item](https://git.nomadicinteractive.dev/ReverseEng/commonlib_NonVR/src/branch/main/include/RE/B/BGSInventoryItem.h)
+- [commonlib_NonVR inventory list](https://git.nomadicinteractive.dev/ReverseEng/commonlib_NonVR/src/branch/main/include/RE/B/BGSInventoryList.h)
+- [runtime RE findings](https://git.nomadicinteractive.dev/ReverseEng/commonlib_NonVR/src/branch/main/RE-Work/Runtime/03-FINDINGS.md)
+
+The runtime notes include the OG and AE RVAs used to verify these IDs.
+
+### Character tinting
+
+Added the two tint setters where frakkin and Luca agree on the same runtime targets:
+
+- `PlayerCharacter::SetTintingData`
+- `TESNPC::SetTintingData`
+
+Sources:
+
+- [frakkin tint/head-part commit](https://github.com/frakkin64/commonlibf4/commit/32eec000d87bad4c93d438a835fd6f989bfabbc9)
+- [Luca PlayerCharacter implementation](https://github.com/LucaDotGit/CommonLibF4/blob/main/src/RE/P/PlayerCharacter.cpp)
+- [Luca TESNPC implementation](https://github.com/LucaDotGit/CommonLibF4/blob/main/src/RE/T/TESNPC.cpp)
+- [Luca runtime IDs](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/RE/IDs.hpp)
+
+The other frakkin tint/head-part functions are still single-source, so I did not add them yet.
+
+### Texture loading
+
+Added the texture functions where the signatures from alandtse line up with the runtime IDs in `commonlib_NonVR`:
+
+- `BSGraphics::LoadTextureData`
+- the three `NiTexture::Create` overloads
+
+Sources:
+
+- [alandtse BSGraphics](https://github.com/alandtse/CommonLibF4/blob/master/CommonLibF4/include/RE/Bethesda/BSGraphics.h)
+- [alandtse NiTexture](https://github.com/alandtse/CommonLibF4/blob/master/CommonLibF4/include/RE/NetImmerse/NiTexture.h)
+- [commonlib_NonVR runtime IDs](https://git.nomadicinteractive.dev/ReverseEng/commonlib_NonVR/src/branch/main/include/RE/IDs.h)
+
+The render-target manager and external Scaleform texture functions are still only backed by the local reference in this pass, so they stay out for now.
+
 ## Already in GARDEN
 
 I checked these and we already have them:

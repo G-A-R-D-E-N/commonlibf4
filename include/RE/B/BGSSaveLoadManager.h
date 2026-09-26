@@ -96,6 +96,76 @@ namespace RE
 			return func(this, a_directoryPath);
 		}
 
+		void BufferSceneScreenShot()
+		{
+			using func_t = decltype(&BGSSaveLoadManager::BufferSceneScreenShot);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::BufferSceneScreenShot };
+			return func(this);
+		}
+
+		void GetFullPath(const char* a_fileName, char* a_fullPath, bool a_tempFile = false) const
+		{
+			using func_t = decltype(&BGSSaveLoadManager::GetFullPath);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::GetFullPath };
+			return func(this, a_fileName, a_fullPath, a_tempFile);
+		}
+
+		[[nodiscard]] bool IsLoadingAllowed() const
+		{
+			using func_t = decltype(&BGSSaveLoadManager::IsLoadingAllowed);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::IsLoadingAllowed };
+			return func(this);
+		}
+
+		[[nodiscard]] bool IsSavingAllowed() const
+		{
+			using func_t = decltype(&BGSSaveLoadManager::IsSavingAllowed);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::IsSavingAllowed };
+			return func(this);
+		}
+
+		bool Quickload()
+		{
+			using func_t = decltype(&BGSSaveLoadManager::Quickload);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::Quickload };
+			return func(this);
+		}
+
+		bool Quicksave()
+		{
+			using func_t = decltype(&BGSSaveLoadManager::Quicksave);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::Quicksave };
+			return func(this);
+		}
+
+		void DeleteSaveFileImpl(const char* a_fileName, std::int32_t a_deviceID, bool a_checkHasSaveData)
+		{
+			using func_t = decltype(&BGSSaveLoadManager::DeleteSaveFileImpl);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::DeleteSaveFileImpl };
+			return func(this, a_fileName, a_deviceID, a_checkHasSaveData);
+		}
+
+		void GenerateSaveFileNameImpl(char* a_saveFileName, bool a_displayOnly, SAVEFILE_CATEGORY a_saveCategory)
+		{
+			using func_t = decltype(&BGSSaveLoadManager::GenerateSaveFileNameImpl);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::GenerateSaveFileNameImpl };
+			return func(this, a_saveFileName, a_displayOnly, a_saveCategory);
+		}
+
+		bool LoadGameImpl(const char* a_fileName, std::int32_t a_deviceID, std::uint32_t a_outputStats, bool a_checkForMods, bool a_ignoreMissingContent)
+		{
+			using func_t = decltype(&BGSSaveLoadManager::LoadGameImpl);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::LoadGameImpl };
+			return func(this, a_fileName, a_deviceID, a_outputStats, a_checkForMods, a_ignoreMissingContent);
+		}
+
+		bool SaveGameImpl(const char* a_fileName, std::int32_t a_deviceID, std::uint32_t a_outputStats, bool a_compress)
+		{
+			using func_t = decltype(&BGSSaveLoadManager::SaveGameImpl);
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::SaveGameImpl };
+			return func(this, a_fileName, a_deviceID, a_outputStats, a_compress);
+		}
+
 		// members
 		BSTArray<BGSSaveLoadFileEntry*>          saveGameList;                  // 008
 		bool                                     isSaveListBuilt;               // 020
