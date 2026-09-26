@@ -2,6 +2,11 @@
 
 namespace RE::ID
 {
+	namespace ActivateHandler
+	{
+		inline constexpr REL::VariantID DisableInput{ 35336, 2234873 };
+	}
+
 	namespace ActiveEffect
 	{
 		inline constexpr REL::VariantID CheckDisplacementSpellOnTarget{ 1415178, 2226001 };
