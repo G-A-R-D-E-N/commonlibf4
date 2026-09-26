@@ -2860,6 +2860,11 @@ namespace Scaleform::ID
 		inline constexpr REL::VariantID VisitElements{ 851872, 2286785 };
 		inline constexpr REL::VariantID GetDisplayInfo{ 498814, 2285873 };
 		inline constexpr REL::VariantID SetDisplayInfo{ 146578, 2286572 };
+		inline constexpr REL::VariantID GetDisplayMatrix{ 1494470, 2285874 };
+		inline constexpr REL::VariantID SetDisplayMatrix{ 22308, 2286573 };
+		inline constexpr REL::VariantID GetCxform{ 307708, 2285854 };
+		inline constexpr REL::VariantID SetCxform{ 692629, 2286570 };
+		inline constexpr REL::VariantID AttachMovie{ 373078, 2285650 };
 		inline constexpr REL::VariantID CreateEmptyMovieClip{ 1579893, 2285573 };
 		inline constexpr REL::VariantID GotoAndPlay_Int{ 166362, 2286057 };
 		inline constexpr REL::VariantID GotoAndPlay_String{ 1562220, 2286058 };

@@ -5,8 +5,14 @@
 #include "Scaleform/R/Render_EdgeAAMode.h"
 #include "Scaleform/R/Render_Matrix.h"
 
+namespace Scaleform::Render
+{
+	class Cxform;
+}
+
 namespace Scaleform::GFx
 {
+	class MemberValueSet;
 	class Movie;
 	class MovieImpl;
 
@@ -544,6 +550,41 @@ namespace Scaleform::GFx
 				using func_t = decltype(&ObjectInterface::SetDisplayInfo);
 				static REL::Relocation<func_t> func{ ID::GFx::Value::SetDisplayInfo };
 				return func(this, a_data, a_info);
+			}
+
+			bool GetDisplayMatrix(void* a_data, Render::Matrix2x4<float>* a_matrix) const
+			{
+				using func_t = decltype(&ObjectInterface::GetDisplayMatrix);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetDisplayMatrix };
+				return func(this, a_data, a_matrix);
+			}
+
+			bool SetDisplayMatrix(void* a_data, const Render::Matrix2x4<float>* a_matrix)
+			{
+				using func_t = decltype(&ObjectInterface::SetDisplayMatrix);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::SetDisplayMatrix };
+				return func(this, a_data, a_matrix);
+			}
+
+			bool GetCxform(void* a_data, Render::Cxform* a_cxform) const
+			{
+				using func_t = decltype(&ObjectInterface::GetCxform);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetCxform };
+				return func(this, a_data, a_cxform);
+			}
+
+			bool SetCxform(void* a_data, const Render::Cxform* a_cxform)
+			{
+				using func_t = decltype(&ObjectInterface::SetCxform);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::SetCxform };
+				return func(this, a_data, a_cxform);
+			}
+
+			bool AttachMovie(void* a_data, Value* a_movieClip, const char* a_symbolName, const char* a_instanceName, std::int32_t a_depth, const MemberValueSet* a_initList)
+			{
+				using func_t = decltype(&ObjectInterface::AttachMovie);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::AttachMovie };
+				return func(this, a_data, a_movieClip, a_symbolName, a_instanceName, a_depth, a_initList);
 			}
 
 			bool CreateEmptyMovieClip(void* a_data, Value* a_movieClip, const char* a_instanceName, std::int32_t a_depth)

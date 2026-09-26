@@ -158,7 +158,15 @@ Sources:
 - [Luca GFx Value](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/Scaleform/G/GFx_Value.hpp)
 - [Luca runtime IDs](https://github.com/LucaDotGit/CommonLibF4/blob/main/include/RE/IDs.hpp)
 
-The remaining `GFx::Value` functions need supporting matrix/cxform/member-value types that GARDEN does not currently expose, so I left those out for now.
+Finished the remaining verified `GFx::Value` bindings too:
+
+- `GetDisplayMatrix`
+- `SetDisplayMatrix`
+- `GetCxform`
+- `SetCxform`
+- `AttachMovie`
+
+GARDEN already had `Render::Matrix2x4`. The other two parameter types only need forward declarations here, so no extra Scaleform dependency files were needed.
 
 ## Already in GARDEN
 
