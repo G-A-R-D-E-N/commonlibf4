@@ -10,6 +10,8 @@
 
 namespace RE
 {
+	class BGSLoadFormBuffer;
+	class BGSSaveFormBuffer;
 	class TESContainer;
 
 	namespace BGSInventoryListEvent
@@ -120,6 +122,34 @@ namespace RE
 		inline void RemoveItem1(TESBoundObject* a_object, std::uint32_t a_count, bool a_manualMerge = false) noexcept
 		{
 			RemoveItem1(a_object, 0, a_count, a_manualMerge);
+		}
+
+		inline void SaveGame(BGSSaveFormBuffer* a_buffer) const
+		{
+			using func_t = decltype(&BGSInventoryList::SaveGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::SaveGame };
+			return func(this, a_buffer);
+		}
+
+		inline void LoadGame(BGSLoadFormBuffer* a_buffer)
+		{
+			using func_t = decltype(&BGSInventoryList::LoadGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::LoadGame };
+			return func(this, a_buffer);
+		}
+
+		inline void InitLoadGame(BGSLoadFormBuffer* a_buffer)
+		{
+			using func_t = decltype(&BGSInventoryList::InitLoadGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::InitLoadGame };
+			return func(this, a_buffer);
+		}
+
+		inline void FinishLoadGame(BGSLoadFormBuffer* a_buffer)
+		{
+			using func_t = decltype(&BGSInventoryList::FinishLoadGame);
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::FinishLoadGame };
+			return func(this, a_buffer);
 		}
 
 		// members

@@ -154,6 +154,13 @@ namespace RE
 			return func(a_speed);
 		}
 
+		[[nodiscard]] float GetShotsPerSecond(InstanceData* a_instanceData) const
+		{
+			using func_t = decltype(&TESObjectWEAP::GetShotsPerSecond);
+			static REL::Relocation<func_t> func{ ID::TESObjectWEAP::GetShotsPerSecond };
+			return func(this, a_instanceData);
+		}
+
 		bool IsMeleeWeapon() const
 		{
 			switch (weaponData.type.get()) {

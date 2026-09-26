@@ -163,6 +163,13 @@ namespace RE
 			return func(this, a_col);
 		}
 
+		void SetTintingData(std::uint16_t a_uniqueID, float a_value, std::uint32_t a_color)
+		{
+			using func_t = decltype(&TESNPC::SetTintingData);
+			static REL::Relocation<func_t> func{ ID::TESNPC::SetTintingData };
+			return func(this, a_uniqueID, a_value, a_color);
+		}
+
 		[[nodiscard]] const char* GetShortName() noexcept
 		{
 			using func_t = decltype(&TESNPC::GetShortName);

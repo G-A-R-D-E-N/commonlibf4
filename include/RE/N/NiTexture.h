@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSResourceNiBinaryStream.h"
 #include "RE/B/BSResource_Stream.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/N/NiObject.h"
@@ -27,6 +28,27 @@ namespace RE
 
 		// add
 		virtual BSTextureArray::Texture* IsBSTextureArray() { return nullptr; }  // 28
+
+		static NiTexture* Create(BSFixedString& a_texturePath, bool a_isSRGB, bool a_allowDegrade)
+		{
+			using func_t = NiTexture* (*)(BSFixedString&, bool, bool);
+			static REL::Relocation<func_t> func{ ID::NiTexture::Create1 };
+			return func(a_texturePath, a_isSRGB, a_allowDegrade);
+		}
+
+		static NiTexture* Create(BSResourceNiBinaryStream* a_stream, const char* a_texturePath, bool a_isDDX, bool a_isSRGB, bool a_allowDegrade)
+		{
+			using func_t = NiTexture* (*)(BSResourceNiBinaryStream*, const char*, bool, bool, bool);
+			static REL::Relocation<func_t> func{ ID::NiTexture::Create2 };
+			return func(a_stream, a_texturePath, a_isDDX, a_isSRGB, a_allowDegrade);
+		}
+
+		static NiTexture* Create(BSTSmartPointer<BSResource::Stream>& a_stream, const char* a_texturePath, bool a_isDDX, bool a_isSRGB, bool a_allowDegrade)
+		{
+			using func_t = NiTexture* (*)(BSTSmartPointer<BSResource::Stream>&, const char*, bool, bool, bool);
+			static REL::Relocation<func_t> func{ ID::NiTexture::Create3 };
+			return func(a_stream, a_texturePath, a_isDDX, a_isSRGB, a_allowDegrade);
+		}
 
 		static void SetAllowDegrade(bool a_allow)
 		{

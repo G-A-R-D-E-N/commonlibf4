@@ -299,6 +299,13 @@ namespace RE
 			return func(this, a_count);
 		}
 
+		void SetTintingData(std::uint16_t a_uniqueID, float a_value, std::uint32_t a_color)
+		{
+			using func_t = decltype(&PlayerCharacter::SetTintingData);
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::SetTintingData };
+			return func(this, a_uniqueID, a_value, a_color);
+		}
+
 		bool HasLOSToTarget(Actor* a_targetRef, bool* pickPerformed)
 		{
 			using func_t = decltype(&PlayerCharacter::HasLOSToTarget);

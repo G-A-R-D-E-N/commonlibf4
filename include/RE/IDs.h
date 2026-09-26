@@ -106,6 +106,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetCurrentAmmo{ 1154936, 2232300 };
 		inline constexpr REL::VariantID GetCommandType{ 678523, 2231825 };
 		inline constexpr REL::VariantID GetOccupiedFurniture{ 1162965, 2232401 };
+		inline constexpr REL::VariantID GetPackageThatIsRunning{ 148295, 2231586 };
 		inline constexpr REL::VariantID IsWeaponSubgraphFinishedLoading{ 320183, 2231757 };
 		inline constexpr REL::VariantID KnockExplosion{ 533106, 2232384 };
 		inline constexpr REL::VariantID ProcessGreet{ 1174935, 2231808 };
@@ -333,6 +334,16 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetStackCount{ 82050, 2194107 };
 		inline constexpr REL::VariantID IsQuestObject{ 823447, 2194076 };
 		inline constexpr REL::VariantID GetTotalWeight{ 571297, 2194074 };
+		inline constexpr REL::VariantID SaveGame{ 1234736, 2194081 };
+		inline constexpr REL::VariantID LoadGame{ 343255, 2194082 };
+		inline constexpr REL::VariantID InitLoadGame{ 222749, 2194083 };
+		inline constexpr REL::VariantID FinishLoadGame{ 820395, 2194084 };
+
+		namespace Stack
+		{
+			inline constexpr REL::VariantID SaveGame{ 149217, 2194058 };
+			inline constexpr REL::VariantID InitLoadGame{ 919557, 2194060 };
+		}
 	}
 
 	namespace BGSInventoryItemUtils
@@ -352,6 +363,10 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetQuestItemCount{ 800903, 2194164 };
 		inline constexpr REL::VariantID FindItemIndex{ 2111, 2194165 };
 		inline constexpr REL::VariantID Clear{ 1080446, 2194162 };
+		inline constexpr REL::VariantID SaveGame{ 1579054, 2194185 };
+		inline constexpr REL::VariantID LoadGame{ 1392171, 2194186 };
+		inline constexpr REL::VariantID InitLoadGame{ 1216903, 2194187 };
+		inline constexpr REL::VariantID FinishLoadGame{ 591614, 2194188 };
 	}
 
 	namespace BGSIronSights
@@ -544,9 +559,19 @@ namespace RE::ID
 	namespace BGSSaveLoadManager
 	{
 		inline constexpr REL::VariantID Singleton{ 1247320, 2697802 };
+		inline constexpr REL::VariantID BufferSceneScreenShot{ 1234898, 2228079 };
 		inline constexpr REL::VariantID BuildSaveGameList{ 1342984, 2228053 };
+		inline constexpr REL::VariantID DeleteSaveFileImpl{ 809711, 2228033 };
+		inline constexpr REL::VariantID GenerateSaveFileNameImpl{ 434834, 2228059 };
+		inline constexpr REL::VariantID GetFullPath{ 505311, 2228030 };
 		inline constexpr REL::VariantID GetSaveDirectoryPath{ 1569549, 2228028 };
+		inline constexpr REL::VariantID IsLoadingAllowed{ 361558, 2228047 };
+		inline constexpr REL::VariantID IsSavingAllowed{ 735045, 2228045 };
+		inline constexpr REL::VariantID LoadGameImpl{ 540706, 2228040 };
 		inline constexpr REL::VariantID QueueSaveLoadTask{ 1487308, 2228080 };
+		inline constexpr REL::VariantID Quickload{ 603305, 2228042 };
+		inline constexpr REL::VariantID Quicksave{ 1055666, 2228041 };
+		inline constexpr REL::VariantID SaveGameImpl{ 954817, 2228036 };
 	}
 
 	namespace BGSSaveLoadGame
@@ -768,6 +793,7 @@ namespace RE::ID
 
 		inline constexpr REL::VariantID GetRendererData{ 1235449, 2704429 };
 		inline constexpr REL::VariantID GetCurrentRendererWindow{ 91810, 2704431 };
+		inline constexpr REL::VariantID LoadTextureData{ 415185, 2277289 };
 	}
 
 	namespace BSIdleInputWatcher
@@ -1818,6 +1844,9 @@ namespace RE::ID
 
 	namespace NiTexture
 	{
+		inline constexpr REL::VariantID Create1{ 1071950, 2270134 };
+		inline constexpr REL::VariantID Create2{ 964969, 2270135 };
+		inline constexpr REL::VariantID Create3{ 685580, 2270136 };
 		inline constexpr REL::VariantID SetAllowDegrade{ 948181, 2270148 };
 	}
 
@@ -2051,6 +2080,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID ClearPrison{ 920390, 2233196 };
 		inline constexpr REL::VariantID ReloadWeapon{ 458406, 2232907 };
 		inline constexpr REL::VariantID SetPerkCount{ 616372, 2233187 };
+		inline constexpr REL::VariantID SetTintingData{ 802946, 2233185 };
 		inline constexpr REL::VariantID HasLOSToTarget{ 449775, 2233004 };
 		inline constexpr REL::VariantID TryUnlockObject{ 1341574, 2233040 };
 		inline constexpr REL::VariantID EnableRadio{ 741937, 2233211 };
@@ -2328,7 +2358,10 @@ namespace RE::ID
 		inline constexpr REL::VariantID Singleton{ 711558, 2688883, 4796135 };
 		inline constexpr REL::VariantID AddFormToDataHandler{ 350112, 2192271 };
 		inline constexpr REL::VariantID CheckModsLoaded{ 1432894, 2192323 };
+		inline constexpr REL::VariantID CompileFiles{ 57137, 2192321 };
+		inline constexpr REL::VariantID ConstructObjectList{ 1043280, 2192326 };
 		inline constexpr REL::VariantID CreateReferenceAtLocation{ 500304, 2192301 };
+		inline constexpr REL::VariantID InitAllForms{ 189223, 2192344 };
 		inline constexpr REL::VariantID IsFormIDInuse{ 1448838, 2192351 };
 	}
 
@@ -2449,6 +2482,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetSex{ 1257181, 2207107 };
 		inline constexpr REL::VariantID GetFacialBoneMorphIntensity{ 272217, 2207416 };
 		inline constexpr REL::VariantID SetHairColor{ 1201742, 2207426 };
+		inline constexpr REL::VariantID SetTintingData{ 452734, 2207493 };
 		inline constexpr REL::VariantID GetShortName{ 1221705, 2207405 };
 		inline constexpr REL::VariantID GetXPValue{ 1134136, 2207384 };
 	}
@@ -2547,6 +2581,7 @@ namespace RE::ID
 	{
 		inline constexpr REL::VariantID GetMeleeAttackSpeed{ 817670, 2198957 };
 		inline constexpr REL::VariantID GetMeleeAttackSpeedLabel{ 178784, 2198959 };
+		inline constexpr REL::VariantID GetShotsPerSecond{ 752116, 2198956 };
 		inline constexpr REL::VariantID Fire{ 1056037, 2198960 };
 	}
 
@@ -2751,6 +2786,7 @@ namespace RE::ID
 		inline constexpr REL::VariantID GetSelectedWorkshopMenuNode{ 763948, 2195024 };
 		inline constexpr REL::VariantID InitializePlacementReference{ 1577199, 0 };  // Inlined in NG/AE
 		inline constexpr REL::VariantID IsLocationWithinBuildableArea{ 990965, 2194956 };
+		inline constexpr REL::VariantID IsWorkshopItem{ 1386903, 2194912 };
 		inline constexpr REL::VariantID PlaceCurrentReference{ 1058211, 2195155 };
 		inline constexpr REL::VariantID RegisterForItemDestroyed{ 1367004, 2194930 };
 		inline constexpr REL::VariantID RegisterForItemMoved{ 835323, 2194932 };
@@ -2806,17 +2842,32 @@ namespace Scaleform::ID
 	{
 		inline constexpr REL::VariantID ObjectAddRef{ 244786, 2286228 };
 		inline constexpr REL::VariantID ObjectRelease{ 856221, 2286229 };
+		inline constexpr REL::VariantID IsInstanceOf{ 616029, 2286137 };
+		inline constexpr REL::VariantID GetParent{ 227189, 2285968 };
 		inline constexpr REL::VariantID HasMember{ 788691, 2286078 };
+		inline constexpr REL::VariantID DeleteMember{ 1397711, 2285595 };
 		inline constexpr REL::VariantID GetArraySize{ 254218, 2285791 };
+		inline constexpr REL::VariantID SetArraySize{ 1479924, 2286563 };
 		inline constexpr REL::VariantID GetMember{ 1517430, 2285936, 4494126 };
 		inline constexpr REL::VariantID GetElement{ 827659, 2285881 };
 		inline constexpr REL::VariantID SetElement{ 433707, 2286575 };
 		inline constexpr REL::VariantID SetMember{ 1360149, 2286589 };
 		inline constexpr REL::VariantID Invoke{ 655847, 2286101 };
 		inline constexpr REL::VariantID PushBack{ 1330475, 2286424 };
+		inline constexpr REL::VariantID PopBack{ 13718, 2286392 };
 		inline constexpr REL::VariantID RemoveElements{ 1286586, 2286475 };
 		inline constexpr REL::VariantID VisitMembers{ 1276961, 2286786 };
+		inline constexpr REL::VariantID VisitElements{ 851872, 2286785 };
 		inline constexpr REL::VariantID GetDisplayInfo{ 498814, 2285873 };
+		inline constexpr REL::VariantID SetDisplayInfo{ 146578, 2286572 };
+		inline constexpr REL::VariantID GetDisplayMatrix{ 1494470, 2285874 };
+		inline constexpr REL::VariantID SetDisplayMatrix{ 22308, 2286573 };
+		inline constexpr REL::VariantID GetCxform{ 307708, 2285854 };
+		inline constexpr REL::VariantID SetCxform{ 692629, 2286570 };
+		inline constexpr REL::VariantID AttachMovie{ 373078, 2285650 };
+		inline constexpr REL::VariantID CreateEmptyMovieClip{ 1579893, 2285573 };
+		inline constexpr REL::VariantID GotoAndPlay_Int{ 166362, 2286057 };
+		inline constexpr REL::VariantID GotoAndPlay_String{ 1562220, 2286058 };
 	}
 
 	namespace Memory
