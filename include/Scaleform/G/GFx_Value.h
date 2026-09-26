@@ -12,6 +12,7 @@ namespace Scaleform::Render
 
 namespace Scaleform::GFx
 {
+	class MemberValueSet;
 	class Movie;
 	class MovieImpl;
 
@@ -577,6 +578,13 @@ namespace Scaleform::GFx
 				using func_t = decltype(&ObjectInterface::SetCxform);
 				static REL::Relocation<func_t> func{ ID::GFx::Value::SetCxform };
 				return func(this, a_data, a_cxform);
+			}
+
+			bool AttachMovie(void* a_data, Value* a_movieClip, const char* a_symbolName, const char* a_instanceName, std::int32_t a_depth, const MemberValueSet* a_initList)
+			{
+				using func_t = decltype(&ObjectInterface::AttachMovie);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::AttachMovie };
+				return func(this, a_data, a_movieClip, a_symbolName, a_instanceName, a_depth, a_initList);
 			}
 
 			bool CreateEmptyMovieClip(void* a_data, Value* a_movieClip, const char* a_instanceName, std::int32_t a_depth)

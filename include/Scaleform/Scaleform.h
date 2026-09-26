@@ -57,6 +57,8 @@
 #include "Scaleform/G/GFx_Loader.h"
 #include "Scaleform/G/GFx_LogBase.h"
 #include "Scaleform/G/GFx_LogState.h"
+#include "Scaleform/G/GFx_MemberValue.h"
+#include "Scaleform/G/GFx_MemberValueSet.h"
 #include "Scaleform/G/GFx_MemoryContext.h"
 #include "Scaleform/G/GFx_MemoryParams.h"
 #include "Scaleform/G/GFx_Movie.h"
