@@ -881,6 +881,12 @@ namespace RE::ID
 		inline constexpr REL::VariantID BinaryStreamWithRescan{ 543595, 2205871 };
 	}
 
+	namespace BSScaleformExternalTexture
+	{
+		inline constexpr REL::VariantID SetTexture{ 119731, 2287494 };
+		inline constexpr REL::VariantID ReleaseTexture{ 651971, 2287493 };
+	}
+
 	namespace BSScaleformManager
 	{
 		inline constexpr REL::VariantID Singleton{ 106578, 2689600, 4796889 };
@@ -2829,6 +2835,20 @@ namespace Scaleform::ID
 		inline constexpr REL::VariantID RemoveElements{ 1286586, 2286475 };
 		inline constexpr REL::VariantID VisitMembers{ 1276961, 2286786 };
 		inline constexpr REL::VariantID GetDisplayInfo{ 498814, 2285873 };
+		inline constexpr REL::VariantID IsInstanceOf{ 616029, 2286137 };
+		inline constexpr REL::VariantID GetParent{ 227189, 2285968 };
+		inline constexpr REL::VariantID SetArraySize{ 1479924, 2286563 };
+		inline constexpr REL::VariantID DeleteMember{ 1397711, 2285595 };
+		inline constexpr REL::VariantID PopBack{ 13718, 2286392 };
+		inline constexpr REL::VariantID VisitElements{ 851872, 2286785 };
+		inline constexpr REL::VariantID SetDisplayInfo{ 146578, 2286572 };
+		inline constexpr REL::VariantID GetDisplayMatrix{ 1494470, 2285874 };
+		inline constexpr REL::VariantID SetDisplayMatrix{ 22308, 2286573 };
+		inline constexpr REL::VariantID GetCxform{ 307708, 2285854 };
+		inline constexpr REL::VariantID SetCxform{ 692629, 2286570 };
+		inline constexpr REL::VariantID CreateEmptyMovieClip{ 1579893, 2285573 };
+		inline constexpr REL::VariantID GotoAndPlay_Int{ 166362, 2286057 };
+		inline constexpr REL::VariantID GotoAndPlay_String{ 1562220, 2286058 };
 	}
 
 	namespace Memory

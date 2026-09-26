@@ -107,6 +107,7 @@
 #include "Scaleform/R/Render_ContextImpl_RTHandle.h"
 #include "Scaleform/R/Render_ContextImpl_RenderNotify.h"
 #include "Scaleform/R/Render_ContextImpl_SnapshotPage.h"
+#include "Scaleform/R/Render_Cxform.h"
 #include "Scaleform/R/Render_EdgeAAMode.h"
 #include "Scaleform/R/Render_Interfaces.h"
 #include "Scaleform/R/Render_LinearHeap.h"
